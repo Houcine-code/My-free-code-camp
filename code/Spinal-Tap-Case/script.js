@@ -1,15 +1,24 @@
-const regex1 = /a/g;
-const str1 = 'table football, foosball';
-regex1.test(str1);
-console.log(regex1.lastIndex);
+function camelCasetostring(x){
+  let str = x.match(/[A-Z][a-z]*|[a-z][a-z]*/g);
+   return str.map(tocapital).join("-");
+}
+function tocapital(strg){
+return strg.charAt(0).toLowerCase() + strg.substring(1);
+}
+
 function spinalCase(str) {
   let res = str.split(/\s|-|_/);
-  let res2 = [];
   for(let i in res){
-    if(res[i].indexOf(/[a-z]*[A-Z][a-z]*/) >= 0 ){
-    res2.push(res[i]);
+    let regex = /[a-z][A-Z]/g;
+    regex.test(res[i]);
+    if(regex.lastIndex > 1){
+    res[i] = camelCasetostring(res[i]);
+    }
+    else{
+    res[i] = res[i].toLowerCase();
     }
   }
+  let res2 = res.join("-");
   return res2;
 }
 
