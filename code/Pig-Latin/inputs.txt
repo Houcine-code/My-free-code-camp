@@ -1,0 +1,19 @@
+translatePigLatin("california") should return the string aliforniacay.
+
+Passed
+translatePigLatin("paragraphs") should return the string aragraphspay.
+
+Passed
+translatePigLatin("glove") should return the string oveglay.
+
+Passed
+translatePigLatin("algorithm") should return the string algorithmway.
+
+Passed
+translatePigLatin("eight") should return the string eightway.
+
+Passed
+Should handle words where the first vowel comes in the middle of the word. translatePigLatin("schwartz") should return the string artzschway.
+
+Passed
+Should handle words without vowels. translatePigLatin("rhythm") should return the string rhythmay.
