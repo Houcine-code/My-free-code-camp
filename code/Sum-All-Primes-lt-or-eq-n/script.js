@@ -9,11 +9,11 @@ function checkprimes(n) {
   else status = true;
   return status
 }
-function primes(num){
+function sumPrimes(num){
 let primes = [];
 for(let i = 2; i <= num; i++){
   if(checkprimes(i)) primes.push(i);
 }
-return primes;
+return primes.reduce((x,y) => x+y,0);
 }
-console.log(primes(10));
+console.log(sumPrimes(10));
