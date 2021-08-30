@@ -11,7 +11,7 @@ function checkprimes(n) {
 }
 function primes(num){
 let primes = [];
-for(let i = 1; i <= num; i++){
+for(let i = 2; i <= num; i++){
   if(checkprimes(i)) primes.push(i);
 }
 return primes;
