@@ -14,6 +14,6 @@ let primes = [];
 for(let i = 2; i <= num; i++){
   if(checkprimes(i)) primes.push(i);
 }
-return primes.reduce((x,y) => x+y,0);
+return primes;
 }
 console.log(sumPrimes(10));
